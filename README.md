@@ -1,16 +1,68 @@
-# React + Vite
+# 🍕 Balanced Bites
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+**Balanced Bites** is a modern, responsive food delivery web application built with React and Vite. It allows users to browse restaurants, explore food categories, add items to cart, apply coupons, and track orders — all with a smooth, animated user experience.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Home Page** — Hero section, category explorer, and popular foods
+- **Restaurants** — Browse restaurant listings with details
+- **Categories** — Filter foods by All, Burgers, Pizza, Indian, Chinese, Desserts, Beverages, Healthy
+- **Cart & Checkout** — Full cart management, coupon offers, and order summary
+- **Order Confirmation** — Success page after placing an order
+- **Track Order** — Real-time order tracking UI
+- **Search** — Global food/restaurant search from the navbar
+- **Responsive Design** — Mobile-first layout with collapsible navigation and optimized grid systems
 
-## React Compiler
+## 🛠 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Tool | Purpose |
+|------|---------|
+| React 19 | UI framework |
+| Vite | Build tool & dev server |
+| React Router v6 | Client-side routing |
+| Framer Motion | Animations & transitions |
+| CSS Modules | Scoped component styling |
+| Oxlint | Linting & code quality |
 
-## Expanding the Oxlint configuration
+## 📁 Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```
+src/
+  components/
+    layout/        Navbar, Footer, Layout, CartSidebar, Hero
+    sections/      Categories, PopularFoods
+    ui/            Button, Badge, CouponCard, FoodCard, SearchBar, etc.
+    utils/         ScrollToTop
+  constants/       Categories, images, navLinks
+  context/         CartContext, FoodFilterContext
+  data/            Coupons, foods, restaurants
+  pages/           Home, Restaurants, Categories, Checkout, TrackOrder, etc.
+  routes.jsx       Route definitions
+  App.jsx          Root provider tree
+```
+
+## 🚀 Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+
+# Build for production
+npm run build
+
+# Lint
+npx oxlint
+```
+
+## 📦 Key Packages
+
+- `react-icons/fi` — Navigation and action icons
+- `framer-motion` — Page transitions and micro-interactions
+- `react-router-dom` — SPA routing
+
+## 📄 License
+
+This project is private and intended for demonstration purposes only.
