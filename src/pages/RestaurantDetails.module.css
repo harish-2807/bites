@@ -1,0 +1,224 @@
+.bannerWrapper {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.bannerOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.25) 55%, transparent 100%);
+}
+
+.bannerContent {
+  position: absolute;
+  left: 1.25rem;
+  bottom: 1.25rem;
+  color: var(--color-white);
+  max-width: 60%;
+}
+
+.bannerTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+}
+
+.bannerCuisine {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.statusBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  backdrop-filter: blur(2px);
+}
+
+.statusBadge.open {
+  background-color: rgba(22, 163, 74, 0.12);
+  color: #16a34a;
+}
+
+.statusBadge.closed {
+  background-color: rgba(220, 38, 38, 0.12);
+  color: #dc2626;
+}
+
+.backLink {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #111;
+  transition: background-color 0.2s ease;
+}
+
+.backLink:hover {
+  background-color: #ffffff;
+}
+
+.backLink svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.container {
+  max-width: 1180px;
+  margin-inline: auto;
+  padding-block: 1.5rem 3rem;
+  padding-inline: 1rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.infoHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.name {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin: 0;
+}
+
+.offerBadge {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-orange-dark);
+}
+
+.offerNote {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.cuisine {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.ratingRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.star {
+  width: 1rem;
+  height: 1rem;
+  color: #eab308;
+  flex-shrink: 0;
+}
+
+.reviews {
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-top: 0.25rem;
+}
+
+.meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.menuSection {
+  margin-top: 2rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-heading);
+}
+
+.menuGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.empty,
+.notFound {
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.notFound {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 3rem 1rem;
+}
+
+@media (max-width: 640px) {
+  .bannerWrapper {
+    height: 200px;
+  }
+
+  .bannerContent {
+    max-width: 100%;
+  }
+
+  .container {
+    padding-block: 1.25rem 2rem;
+    padding-inline: 0.75rem;
+  }
+
+  .name {
+    font-size: 1.3rem;
+  }
+
+  .meta {
+    gap: 0.75rem;
+  }
+}

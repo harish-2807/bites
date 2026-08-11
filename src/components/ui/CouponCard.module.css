@@ -1,0 +1,195 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.05rem 1.1rem 1.05rem 3.6rem;
+  border-radius: var(--radius);
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-border);
+  box-shadow: var(--color-shadow-sm);
+  transition: var(--transition);
+  overflow: visible;
+}
+
+.card:hover {
+  box-shadow: var(--color-shadow);
+  border-color: var(--color-divider);
+}
+
+.card:focus-within {
+  border-color: var(--color-orange);
+  box-shadow: 0 0 0 3px var(--color-orange-light);
+}
+
+.banner {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  translate: 0 -50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(135deg, #6366f1 0%, #4338ca 100%);
+  color: var(--color-white);
+}
+
+.purple .banner {
+  background: linear-gradient(135deg, #6366f1 0%, #4338ca 100%);
+}
+.amber .banner {
+  background: linear-gradient(135deg, #f59e0b 0%, #b45309 100%);
+}
+.rose .banner {
+  background: linear-gradient(135deg, #ec4899 0%, #9d1820 100%);
+}
+.blue .banner {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+}
+.emerald .banner {
+  background: linear-gradient(135deg, #10b981 0%, #065f46 100%);
+}
+.fuchsia .banner {
+  background: linear-gradient(135deg, #d946ef 0%, #701a75 100%);
+}
+.orange .banner {
+  background: linear-gradient(135deg, #ff6b35 0%, #c0392b 100%);
+}
+.sky .banner {
+  background: linear-gradient(135deg, #06b6d4 0%, #0e7490 100%);
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+}
+
+.body {
+  flex: 1;
+}
+
+.topRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.title {
+  font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-heading);
+  margin: 0;
+}
+
+.code {
+  font-family: 'SFMono-MT', ui-monospace, 'Courier New', monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  background-color: var(--color-divider);
+  padding: 0.22rem 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.description {
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.validity {
+  font-size: 0.78rem;
+  color: #059669;
+  margin: 0;
+}
+
+.terms {
+  font-size: 0.72rem;
+  line-height: 1.4;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.minHint {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #dc2626;
+  margin: 0;
+}
+
+.actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-self: start;
+  margin-top: 0.15rem;
+}
+
+.copyBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  background-color: var(--color-divider);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.copyBtn:hover {
+  color: var(--color-heading);
+  background-color: var(--color-border);
+}
+
+.applyBtn {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-white);
+  background: linear-gradient(135deg, var(--color-orange) 0%, var(--color-orange-dark) 100%);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.85rem;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.applyBtn:hover {
+  filter: brightness(1.05);
+}
+
+.appliedBtn {
+  background: linear-gradient(135deg, #059669 0%, #065f46 100%);
+}
+
+.disabledBtn {
+  cursor: not-allowed;
+  opacity: 0.6;
+  background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+  filter: none;
+}
+
+.applied {
+  border-color: var(--color-orange);
+  background-color: #fff7f0;
+}
+
+.disabled {
+  opacity: 0.55;
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 0.9rem 1rem 0.9rem 3.4rem;
+  }
+}

@@ -1,0 +1,182 @@
+.page {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.card {
+  max-width: 560px;
+  width: 100%;
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 2.5rem 1.75rem 2.25rem;
+  box-shadow: var(--color-shadow);
+  text-align: center;
+}
+
+.thankyou {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.confirmIcon {
+  width: 48px;
+  height: 48px;
+  color: #059669;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2.6vw, 1.75rem);
+  font-weight: 700;
+  color: var(--color-heading);
+  margin: 0 0 0.35rem;
+}
+
+.subtitle {
+  color: var(--color-text-muted);
+  margin: 0 0 1.25rem;
+  font-size: 0.94rem;
+}
+
+.orderId {
+  font-family: 'SFMono-MT', ui-monospace, 'Courier New', monospace;
+  font-weight: 700;
+  color: var(--color-heading);
+  background-color: var(--color-bg-alt);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.summary {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1.5rem 0;
+  padding: 1rem 0;
+  border-top: 1px dashed var(--color-divider);
+  border-bottom: 1px dashed var(--color-divider);
+}
+
+.summaryItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.summaryItem strong {
+  font-size: 1.05rem;
+  color: var(--color-heading);
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+  padding: 0 1rem;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+.stepCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-divider);
+  color: var(--color-text-muted);
+  border: 2px solid var(--color-divider);
+  transition: var(--transition);
+}
+
+.stepActive {
+  background-color: var(--color-bg-alt);
+  border-color: var(--color-orange);
+  color: var(--color-orange);
+}
+
+.stepDone {
+  background-color: #059669;
+  border-color: #059669;
+  color: var(--color-white);
+}
+
+.stepIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.stepLabel {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.stepLabelActive {
+  color: var(--color-orange);
+  font-weight: 700;
+}
+
+.trackingNote {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin: 0.5rem 0 1.75rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+.trackBtn,
+.homeBtn {
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: var(--radius);
+  border: none;
+  padding: 0.6rem 1.1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.trackBtn {
+  color: var(--color-white);
+  background: linear-gradient(135deg, var(--color-orange) 0%, var(--color-orange-dark) 100%);
+}
+
+.trackBtn:hover {
+  filter: brightness(1.08);
+}
+
+.homeBtn {
+  color: var(--color-heading);
+  background-color: var(--color-bg-alt);
+  border: 1.5px solid var(--color-border);
+}
+
+.homeBtn:hover {
+  background-color: var(--color-divider);
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 1.75rem 1rem;
+  }
+  .stepper {
+    padding: 0;
+  }
+}

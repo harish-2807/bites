@@ -1,0 +1,170 @@
+.page {
+  padding-top: 1rem;
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--color-heading);
+  margin: 0 0 1.5rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 2rem;
+  align-items: start;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.coupons {
+  min-width: 0;
+}
+
+.couponsHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1.25rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1.1rem, 1.8vw, 1.25rem);
+  font-weight: 700;
+  color: var(--color-heading);
+  margin: 0;
+}
+
+.sectionHint,
+.emptyCoupons {
+  font-size: 0.86rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.couponGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.summary {
+  width: 100%;
+}
+
+.summaryCard {
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.3rem;
+  box-shadow: var(--color-shadow-sm);
+}
+
+.summaryTitle {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin: 0 0 1rem;
+}
+
+.summaryRows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.summaryRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.summaryRow span:last-child {
+  font-weight: 600;
+}
+
+.discountRow span {
+  color: #059669;
+}
+
+.totalRow {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.totalRow span:last-child {
+  color: var(--color-orange);
+}
+
+.appliedCouponRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--color-divider);
+  font-size: 0.86rem;
+}
+
+.appliedCode {
+  font-family: 'SFMono-MT', ui-monospace, 'Courier New', monospace;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--color-orange);
+  background-color: var(--color-bg-alt);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-sm);
+}
+
+.placeOrderBtn {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-white);
+  background: linear-gradient(135deg, var(--color-orange) 0%, var(--color-orange-dark) 100%);
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.placeOrderBtn:hover:not(:disabled) {
+  filter: brightness(1.08);
+}
+
+.placeOrderBtn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+  filter: none;
+}
+
+.toast {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  translate: -50% 0;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--color-white);
+  background-color: #111827;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--color-shadow-md);
+  z-index: 50;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}

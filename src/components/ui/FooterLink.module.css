@@ -1,0 +1,16 @@
+.link {
+  display: inline-block;
+  padding: 0.35rem 0;
+  font-size: 0.92rem;
+  color: #cbd5e1;
+  transition: var(--transition);
+}
+
+.link:hover {
+  color: var(--color-orange);
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--color-orange);
+  outline-offset: 1px;
+}

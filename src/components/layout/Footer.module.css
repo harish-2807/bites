@@ -1,0 +1,146 @@
+.footer {
+  margin-top: auto;
+  background-color: #111827;
+  color: #cbd5e1;
+  border-top: 1.5px solid #1f293b;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 3rem 1.25rem 2rem;
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.logoSymbol {
+  font-size: 1.4rem;
+}
+
+.logoText {
+  letter-spacing: 0.02em;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.colTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin: 0 0 1rem;
+}
+
+.colList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.newsText {
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.newsLabel {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #9ca3af;
+}
+
+.newsForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.newsInput {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.6rem 0.85rem;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  background-color: #1f293b;
+  border: 1.5px solid #374151;
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: var(--transition);
+}
+
+.newsInput:focus {
+  border-color: var(--color-orange);
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.15);
+}
+
+.newsInput::placeholder {
+  color: #6b7287;
+}
+
+.newsBtn {
+  width: fit-content;
+  justify-self: start;
+}
+
+.newsFeedback {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #4ade80;
+  margin: 0;
+}
+
+.bottom {
+  border-top: 1.5px solid #1f293b;
+  padding: 1rem 1.25rem;
+  font-size: 0.85rem;
+  text-align: center;
+  color: #6b7287;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 2rem 1rem 1.5rem;
+  }
+}

@@ -1,0 +1,38 @@
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-white);
+  height: 2rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.9rem;
+  height: 100%;
+  color: var(--color-text-muted);
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.button:hover:not(:disabled) {
+  color: var(--color-orange-dark);
+  background-color: var(--color-bg-alt);
+}
+
+.button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+  min-width: 1.4rem;
+  text-align: center;
+}

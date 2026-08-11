@@ -1,0 +1,55 @@
+.root {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #fff7f2 0%, #ffffff 100%);
+}
+
+.card {
+  text-align: center;
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-divider);
+  border-radius: var(--radius);
+  padding: 3rem 2.5rem;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: var(--color-shadow-md);
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--color-orange);
+  margin: 0 0 0.75rem;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.message {
+  color: var(--color-text-muted);
+  margin: 0 0 1.5rem;
+}
+
+.homeLink {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  color: var(--color-white);
+  background-color: var(--color-orange);
+  border: 2px solid var(--color-orange);
+  transition: background-color var(--transition), transform var(--transition);
+}
+
+.homeLink:hover {
+  background-color: var(--color-orange-dark);
+  border-color: var(--color-orange-dark);
+  transform: translateY(-1px);
+}
+
+.homeLink:focus-visible {
+  outline: 2px solid var(--color-orange);
+  outline-offset: 2px;
+}
