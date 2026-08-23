@@ -11,7 +11,7 @@
 - **Order Confirmation** — Success page after placing an order
 - **Track Order** — Real-time order tracking UI
 - **Search** — Global food/restaurant search from the navbar
-- **Responsive Design** — Mobile-first layout with collapsible navigation and optimized grid systems
+- **Responsive Design** — Mobile-first layout with collapsible navigation and optimized grid systems.
 
 ## 🛠 Tech Stack
 
